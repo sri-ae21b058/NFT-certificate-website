@@ -54,6 +54,9 @@ contract NFTCertificate is ERC721, ERC721Enumerable, ERC721URIStorage, ERC721Bur
     {
         return super.supportsInterface(interfaceId);
     }
-
+    function balanceOf(address owner) public view virtual override(ERC721,IERC721) returns (uint256)
+    {
+        return super.balanceOf(owner);
+    }
     
 }

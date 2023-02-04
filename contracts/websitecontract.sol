@@ -15,6 +15,9 @@ contract websitecontract is NFTCertificate
   {
     super.safeMint(_owner,uri);
   }
-  
+  function balance(address a) public view returns(uint256)
+  {
+    return super.balanceOf(a);
+  }
 
 }
